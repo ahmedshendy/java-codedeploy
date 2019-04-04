@@ -18,6 +18,7 @@ phases:
       - mvn clean install
       - docker image ls
       - docker tag demo-api-server $REPOSITORY_URI:$IMAGE_TAG
+      - docker tag demo-api-server $REPOSITORY_URI:latest
   post_build:
     commands:
       - echo Build completed on `date`
