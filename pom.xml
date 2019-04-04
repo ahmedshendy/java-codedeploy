@@ -81,7 +81,7 @@
                         </goals>
                         <configuration>
                             <imageName>${docker.image.name}</imageName>
-                            <baseImage>maven:jdk-8-alpine</baseImage>
+                            <baseImage>maven:3.6-jdk-8-alpine</baseImage>
                             <entryPoint>["java", "-jar", "/${project.build.finalName}.jar"]</entryPoint>
                             <!-- copy the service's jar file from target into the root directory of the image -->
                             <resources>
